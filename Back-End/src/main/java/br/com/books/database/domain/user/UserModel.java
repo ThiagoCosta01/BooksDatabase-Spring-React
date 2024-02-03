@@ -26,7 +26,7 @@ import jakarta.persistence.*;
 		@Column(name = "sex")
 		private Gender sex = Gender.valueOf("UNKNOWN");
 
-		@Column(name = "creation_date")
+		@Column(name = "creation_date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
 		private Timestamp creationDate;
 
 		
@@ -53,8 +53,7 @@ import jakarta.persistence.*;
 			this.email = userDto.email();
 			this.userpassword = userDto.userpassword();
 			this.sex = userDto.sex();
-			
-			
+						
 		}
 
 		public Long getId() {
