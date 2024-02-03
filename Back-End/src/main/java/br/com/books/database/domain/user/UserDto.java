@@ -1,6 +1,7 @@
 package br.com.books.database.domain.user;
 
+import jakarta.validation.constraints.NotBlank;
 
-public record UserDto(String username, String email, String userpassword, Gender sex) {
+public record UserDto(@NotBlank String username, @NotBlank String email, @NotBlank String userpassword, Gender sex) {
 
 }
