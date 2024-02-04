@@ -20,7 +20,7 @@ import br.com.books.database.domain.user.UserRepository;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("api/user/cadaster")
+@RequestMapping("api/user/register")
 public class UserController {
 
 	@Autowired
